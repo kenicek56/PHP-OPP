@@ -79,4 +79,62 @@ $pimp1 = new pimping();
 $pimp1­>name = "kenice";
 $pimp1­>hat = "pimp hat";
 print "im a pimp named"  {$cat1­>name()}.
+
+// EXAMPLE 1
+class cookies {
+public $brand;
+public $kind;
+public $amount;
+
+function __construct($title, $brand, $kind, $amount) {
+$this­>brand = $brand;
+$this­>kind = $kind;
+$this­>amount = $amount;
+}
+	function getName() {
+	return “{$this­>brand}” .
+	“{$this­>kind}”;
+	}
+}
+ 
+class textbook {
+public $brand;
+public $color;
+public $type;
+function __construct($title, $brand, $color, $type) {
+$this­>brand = $brand;
+$this­>color = $color;
+$this­>type = $type;
+}
+	function getName() {
+	return “{$this­>brand}” .
+	“{$this­>color}”;
+	}
+}
+
+ 
+class iphone {
+public $brand;
+public $color;
+public $price;
+function __construct($title, $number, $color, $amount) {
+$this­>number = $number;
+$this­>color = $color;
+$this­>price = $price;
+}
+	function getName() {
+	return “{$this­>number}” .
+	“{$this­>color}”;
+	}
+}
+
+// EXAMPLE 2
+$cookies1 = new cookies(“chocolate”, “oatmeal”, “peanutbutter”);
+print “cookies 1: {$cookies1­>getName()}\n; 
+
+$textbook1 = new textbook(“math”, “history”, “science”);
+print “textbool 1: {$textbook1­>getName()}\n; 
+
+$iphone1 = new iphone(“iphone3”, “iphone4”, “iphone5”);
+print “ iphone: {$iphone1­>getName()}\n; 
 ?>
