@@ -21,9 +21,11 @@ class Chicken
 
 	function cluck()
 	{
-		return " my chicken has a lot of different " . $this->color;
+		return " and my chicken has a lot of different " . $this->color;
 	}
 }
 
 $frychicken = new Chicken("chocolate", "cluck", "white");
 echo $frychicken->fly();
+$chocolatechicken = new Chicken("chocolate", "cluck", "colors");
+echo $chocolatechicken->cluck();
