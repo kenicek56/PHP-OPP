@@ -8,7 +8,7 @@ class School
 	public $kindergarden;
 
 	function __construct($highschool, $middleschool, $elementry, $kindergarden)
-	{
+    {
 		$this->highschool = $highschool;
 		$this->middleschool = $middleschool;
 		$this->elementry = $elementry;
@@ -17,19 +17,31 @@ class School
 
 	function learning()
 	{
-		return " hate " . $this->highschool;
+		return " hight school "     . $this->highschool . "<br />" . 
+				"middle school "    . $this->middleschool . "<br />" . 
+				 "elmentary school" . $this->elementry . "<br />" . 
+				 "kindergarden "    . $this->kindergarden;
 	}
 
 
 }
-class Highschool extends School {
-	function grade() {
-		return $this->highschool;
+
+class Highschool extends School 
+{
+	function __construct($highschool, $middleschool, $elementry, $kindergarden)
+	{
+		parent::__construct($highschool, $middleschool, $elementry, $kindergarden);
+	}
+	function lazy()
+	{
+		return "mother yar";
 	}
 }
 
-$grades = new School("pasadena highschool", "sierra madre", "washington", "kindergarden");
-print" i attend, but " .$grades->learning();
+$carla = new Highschool("pasadena highschool", "sierra madre", "washington", "kindergarden");
+print $carla->learning() . "<br />";
+print $carla->lazy();
+
 
 class Cookie {
 	public $chicken;
@@ -45,17 +57,26 @@ class Cookie {
 	}
 
 	function getName() {
-		return " and always will be " . $this->chocolatechip;
+		return " chicken cookie "   . $this->chicken . "<br />" . 
+				"chocolatechip "    . $this->chocolatechip . "<br />" . 
+				 "sugar"            . $this->sugar . "<br />" . 
+				 " blueberry "    . $this->blueberry;
 	}
 }
 class Chocolatechip extends Cookie {
+	function __construct($chicken, $chocolatechip, $sugar, $blueberry)
+	{
+		parent::__construct($chicken, $chocolatechip, $sugar, $blueberry);
+	}
 	function chocolate() {
-		return $this->raisen;
+		return " hi ";
 	}
 }
 
-$raisen = new Cookie("chiken", "chocolatechip", "sugar", "blueberry");
-print " my favorite cookie is ".$raisen->getName();
+$raisen = new Chocolatechip("chiken", "chocolatechip", "sugar", "blueberry");
+
+print $raisen->getName() . "<br />";
+print $raisen->chocolate();
 
 class Mother
 {
@@ -74,19 +95,26 @@ class Mother
 
 	function yells()
 	{
-		return " my mom loves to " . $this->nag;
+		return  "cook "  . $this->cook . "<br />" . 
+			    "work "  . $this->work . "<br />" . 
+				"nag "    . $this->nag . "<br />" . 
+				"love " . $this->love;
 	}
 
 
 }
 class Love extends Mother {
+	function __construct($cook, $work, $nag, $love)
+	{
+		parent::__construct($cook, $work, $nag, $love);
+	}
 	function teach() {
 		return $this->nag;
 	}
 }
 
-$teaches = new Mother("cook", "work", "nag", "love");
-print" i love my her but " .$teaches->yells();
-
+$teaches = new Love("cook", "work", "nag", "love");
+print $teaches->yells() . "<br />";
+print $teaches->teach();
 ?>
 
