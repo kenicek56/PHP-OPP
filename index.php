@@ -1,101 +1,126 @@
 <?php 
-class Animals {
-	public $name= "linx";
-	public $gender="female";
-	public $age="7";
-	public $species="cat";
+class Animals
+ {
+	public $name;
+	public $gender;
+	public $age;
+	public $species;
 
-	function meow() {
-     return "{$this->name}" .
-	"{$this->species}";
+	function __construct($name, $gender, $age, $species)
+	{
 
+		$this->name = $name;
+		$this->gender = $gender;
+		$this->age = $age;
+		$this->species = $species;
 	}
 
+	function meow()
+	 {
+     return "my favorite cat is the " . $this->name;
+
+	}
 	
 } 
 
-$cat1 = new meow();
-$cat1­>name = “linx”;
-$cat1­>species = “cat”;
-print “my favorite cat is  {$cat1­>name()}.”
+$cat = new Animals("linx", "female", "seven", "cat");
+echo $cat->meow();
 
-class person {
-	public $name= "Kenice";
-	public $gender="female";
-	public $age="15";
-	public $species="human";
+
+class Person {
+	public $name;
+	public $gender;
+	public $age;
+	public $species;
 
 	function code() {
-     return "{$this->name}" .
-	"{$this->age}";
+     return "hi my name is " . $this->name;
 
 	}
+function __construct($name, $gender, $age, $species)
+	{
 
+		$this->name = $name;
+		$this->gender = $gender;
+		$this->age = $age;
+		$this->species = $species;
+	}
 	
 } 
 
-$kenice1 = new code();
-$kenice1­>name = "kenice";
-$kenice1­>species = "human";
-$kenice1­>age = "15";
-print "my name is"  {$kenice1­>name()}. {$kenice1­>age} "is my age."
+$kenice = new Person("kenice", "female", "15", "human");
+print $kenice->code();
 
 
-class Animals {
-	public $name= "linx";
-	public $gender="female";
-	public $age="7";
-	public $species="cat";
+class Animalsp
+{
+	public $name;
+	public $gender;
+	public $age;
+	public $species;
 
 	function meow() {
-     return "{$this->name}" .
-	"{$this->species}";
-
+     return "hi" . $this->age;
 	}
 
-	
+	function __construct($name, $gender, $noise, $species)
+	{
+
+		$this->name = $name;
+		$this->gender = $gender;
+		$this->noise = $noise;
+		$this->species = $species;
+	}
 } 
 
-$cat1 = new meow();
-$cat1­>name = “linx”;
-$cat1­>species = “cat”;
-print “my favorite cat is  {$cat1­>name()}.”
+$cat1 = new Animalsp("cat", "male", "meow", "cat!");
 
-class pimp {
-	public $name= "kenice";
-	public $cane="canes";
-	public $hat="pimp hat";
+print $cat1->meow();
+
+class Pimp {
+	public $name;
+	public $cane;
+	public $hat;
 
 	function pimping() {
-     return "{$this->name}" .
-	"{$this->cane}";
+     return "yesssssss" . $this->cane;
 
 	}
 
-	
+	function __construct($name, $cane, $hat)
+	{
+
+		$this->name = $name;
+		$this->cane = $cane;
+		$this->hat = $hat;
+	}
 } 
 
-$pimp1 = new pimping();
-$pimp1­>name = "kenice";
-$pimp1­>hat = "pimp hat";
-print "im a pimp named"  {$cat1­>name()}.
+$pimp1 = new Pimp("Kenice", "cane", "hat");
+print $pimp1->pimping();
 
 // EXAMPLE 1
-class cookies {
+class Cookies {
+public $title;	
 public $brand;
-public $kind;
+public $kind;
 public $amount;
 
 function __construct($title, $brand, $kind, $amount) {
-$this­>brand = $brand;
-$this­>kind = $kind;
-$this­>amount = $amount;
+$this->title = $title;
+$this->brand = $brand;
+$this->kind = $kind;
+$this->amount = $amount;
 }
 	function getName() {
-	return “{$this­>brand}” .
-	“{$this­>kind}”;
+	return "{$this->band}" .
+	"{$this->kind}";
 	}
+
 }
+
+$yes = new Cookies("sugar", "sugar", "cookie", "six");
+print $yes->getName();
  
 class textbook {
 public $brand;
@@ -137,4 +162,8 @@ print “textbool 1: {$textbook1­>getName()}\n;
 
 $iphone1 = new iphone(“iphone3”, “iphone4”, “iphone5”);
 print “ iphone: {$iphone1­>getName()}\n; 
+
+
+
+
 ?>
